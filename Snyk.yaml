@@ -1,0 +1,11 @@
+name: Snyk
+on: [push]
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run Snyk to check for vulnerabilities
+      uses: snyk/actions/node@master
+      env:
+        SNYK_TOKEN: ${85893eab-7a7a-4510-ba3f-72903846bde3}
